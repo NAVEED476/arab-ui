@@ -1,0 +1,68 @@
+.right-cont{
+    width: calc(100vw - 200px);
+    height:98.5vh;
+    background: #e8edff;
+    margin-top: -120px;
+    padding-top:10px ;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px;
+}
+.navbar h3{
+    margin-left: 20px;
+}
+.profile{
+    width: 150px;
+    height: 40px;
+    padding: 5px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;gap: 10px;
+    background: white;
+    border-radius: 8px;
+}
+
+.top-cont{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.graph-cont{
+    margin: 0px 30px  20px 30px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.chart-cont{
+    margin: 0px 30px 20px 30px;
+    padding:40px 30px 20px 30px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.bottom-cont{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.profile-cont{
+    border-radius: 16px;
+    margin-right: 30px;
+}
+.social-icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}

@@ -1,17 +1,48 @@
-import React from "react";
-// import "../pages/styles.css";
-import { PieChart } from "@mui/x-charts/PieChart";
+import React, { useState } from "react";
+import "./dashboard.css";
+import { PieChart, pieArcLabelClasses } from "@mui/x-charts/PieChart";
 import { LineChart } from "@mui/x-charts/LineChart";
+import Typography from "@mui/material/Typography";
+import Pagination from "@mui/material/Pagination";
+import Stack from "@mui/material/Stack";
+import PaginationComp from "./Pagination";
+import Table from "./Table";
+import ProfileCard from "./ProfileCard";
+import Rectangle10 from "../Assets/Rectangle10.png"
 
 const Dashboard = () => {
+  const [page, setPage] = React.useState(1);
+  const handleChange = (event, value) => {
+    setPage(value);
+  };
+  const data = [
+    { value: 5, label: "A" },
+    { value: 10, label: "B" },
+    { value: 15, label: "C" },
+    { value: 20, label: "D" },
+  ];
+
+  const size = {
+    width: 400,
+    height: 200,
+  };
+
   return (
     <div>
       <div className="right-cont">
-        <div className="nav-cont"></div>
-        <div className="top-cot">
-          <div className="graph-cont"></div>
-          <div className="chart-cont" style={{display:"flex"}}>
-            <h1>Hello</h1>
+        <div className="navbar">
+            <h3>Good Morning!</h3>
+            <div className="profile">
+                <div>
+                    <p style={{fontSize:"12px", fontWeight:700, margin:0}}>Jhon Doe</p>
+                    <p style={{fontSize:"10px", fontWeight:500,margin:0}}>jhon@doe.com</p>
+                </div>
+                <img src={Rectangle10} alt="" />
+
+            </div>
+        </div>
+        <div className="top-cont">
+          <div className="graph-cont">
             <LineChart
               xAxis={[{ data: [1, 2, 3, 5, 8, 10] }]}
               series={[
@@ -19,27 +50,36 @@ const Dashboard = () => {
                   data: [2, 5.5, 2, 8.5, 1.5, 5],
                 },
               ]}
-              width={500}
-              height={300}
+              width={650}
+              height={260}
             />
+          </div>
+          <div className="chart-cont" style={{ display: "flex" }}>
             <PieChart
               series={[
                 {
-                  data: [
-                    { id: 0, value: 10, label: "series A" },
-                    { id: 1, value: 15, label: "series B" },
-                    { id: 2, value: 20, label: "series C" },
-                  ],
+                  arcLabel: (item) => `${item.label} (${item.value})`,
+                  arcLabelMinAngle: 45,
+                  data,
                 },
               ]}
-              width={400}
-              height={200}
+              sx={{
+                [`& .${pieArcLabelClasses.root}`]: {
+                  fill: "white",
+                  fontWeight: "bold",
+                },
+              }}
+              {...size}
             />
           </div>
         </div>
         <div className="bottom-cont">
-          <div className="table-cont"></div>
-          <div className="profile-cont"></div>
+          <div className="table-cont">
+            <Table />
+          </div>
+          <div className="profile-cont">
+            <ProfileCard />
+          </div>
         </div>
       </div>
     </div>

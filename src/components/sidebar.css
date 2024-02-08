@@ -1,10 +1,72 @@
-.tab-cont{
-    background:#20263a;
-    color: #535353;
-    width: 250px;
-    border: 1px solid red;
+.tab-cont {
+  background: #20263a;
+  color: #535353;
 }
-.tabcolor{
-    background: black;
-    color: aliceblue;
+.tabcolor {
+  background: black;
+  color: aliceblue;
 }
+
+.sidebar-cont {
+  width: 200px;
+  height: 99vh;
+  background: #20263a;
+}
+
+.menu {
+  margin-left: 30px;
+}
+
+.sidebar-list li {
+  list-style: none;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background: black;
+  font-size: 14px;
+  width: 100px;
+}
+
+.menuBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sidebar-list {
+  position: fixed;
+  top: 250px;
+  left: 40px;
+}
+
+.content {
+  position: relative;
+  margin-left: 170px;
+}
+
+.briefcase{
+    align-self: center;
+    margin-left: 50px;
+    position: sticky;
+    margin-top: 20px;
+}  
+
+.sidebar-icons{
+    margin-bottom: -4px;
+    margin-right: 5px;
+}
+
+.signOut{
+    position: fixed;
+    bottom: 0;
+    /* margin-bottom: 1px; */
+    width: 201px;
+    left: 0;
+}
+
+.shutdown-btn{
+    margin-bottom: -3px;
+    margin-right: 5px;
+}
+
+
