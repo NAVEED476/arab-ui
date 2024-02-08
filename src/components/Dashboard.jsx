@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./dashboard.css";
 import { PieChart, pieArcLabelClasses } from "@mui/x-charts/PieChart";
 import { LineChart } from "@mui/x-charts/LineChart";
@@ -9,20 +9,30 @@ import Rectangle10 from "../Assets/Rectangle10.png"
 
 const Dashboard = () => {
   const [page, setPage] = React.useState(1);
+  const [data, setData] = useState([]);
+  const [lineData, setLineData] = useState([]);
   const handleChange = (event, value) => {
     setPage(value);
   };
-  const data = [
-    { value: 5, label: "A" },
-    { value: 10, label: "B" },
-    { value: 15, label: "C" },
-    { value: 20, label: "D" },
-  ];
+
 
   const size = {
     width: 400,
     height: 200,
   };
+
+  useEffect(() => {
+    fetch("https://arab-ms.onrender.com/api/pie-chart")
+      .then((d) => d.json())
+      .then((obj => setData(obj)));
+  }, []);
+
+  const formattedData = data.map((item) => ({
+    label: item.label,
+    value: item.value,
+  }));
+
+
 
   return (
     <div>
@@ -57,7 +67,7 @@ const Dashboard = () => {
                 {
                   arcLabel: (item) => `${item.label} (${item.value})`,
                   arcLabelMinAngle: 45,
-                  data,
+                  data:formattedData,
                 },
               ]}
               sx={{

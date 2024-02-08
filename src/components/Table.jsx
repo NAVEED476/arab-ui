@@ -1,74 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Table.css";
 import TableRow from "./Row";
 import Pagination from "./Pagination";
 
-const Table = ({ setUserData }) => {
-  const [editedUserName, setEditedUserName] = useState("");
-  const [editEmail, setEditEmail] = useState("");
-  const [editRole, setEditRole] = useState("");
-  const [isEditDialogOpen, setEditDialogOpen] = useState(false);
-  const [selectedUserId, setSelectedUserId] = useState(null);
+const Table = () => {
   const [currentPage, setCurrentPage] = useState(1);
+  const [data, setData] = useState([]);
   const itemsPerPage = 5;
 
-  const data = [
-    {
-      id: "1",
-      name: "naveed",
-      email: "naveed@gmail.com",
-      role: "admin",
-    },
-    {
-      id: "1",
-      name: "naveed",
-      email: "naveed@gmail.com",
-      role: "admin",
-    },
-    {
-      id: "1",
-      name: "naveed",
-      email: "naveed@gmail.com",
-      role: "admin",
-    },
-    {
-      id: "1",
-      name: "naveed",
-      email: "naveed@gmail.com",
-      role: "admin",
-    },
-    {
-      id: "1",
-      name: "naveed",
-      email: "naveed@gmail.com",
-      role: "admin",
-    },
-    {
-      id: "1",
-      name: "naveed",
-      email: "naveed@gmail.com",
-      role: "admin",
-    },
-    {
-      id: "1",
-      name: "naveed",
-      email: "naveed@gmail.com",
-      role: "admin",
-    },
-    {
-      id: "1",
-      name: "naveed",
-      email: "naveed@gmail.com",
-      role: "admin",
-    },
-    {
-      id: "1",
-      name: "naveed",
-      email: "naveed@gmail.com",
-      role: "admin",
-    },
-  ];
+  useEffect(() => {
+    fetch("https://arab-ms.onrender.com/api/table")
+      .then((d) => d.json())
+      .then((obj => setData(obj)));
+  }, []);
+  // console.log(data);
 
+ 
   const handlePagination = (page) => {
     setCurrentPage(page);
   };
@@ -85,17 +32,17 @@ const Table = ({ setUserData }) => {
             <thead>
               <tr>
                 <td>
-                  <th >Id</th>
+                  <th>Id</th>
                 </td>
 
                 <td>
                   <th>Name</th>
                 </td>
                 <td>
-                  <th>Email</th>
+                  <th>Quantity</th>
                 </td>
                 <td>
-                  <th>Role</th>
+                  <th>Price</th>
                 </td>
               </tr>
             </thead>

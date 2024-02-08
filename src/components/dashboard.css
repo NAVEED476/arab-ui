@@ -66,3 +66,7 @@
     gap: 15px;
     margin-top: 10px;
 }
+
+.css-1daenge-MuiChartsSurface-root .MuiPieArcLabel-root {
+    display: none;
+}

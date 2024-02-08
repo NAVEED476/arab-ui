@@ -18,16 +18,17 @@
 }
 
 .sidebar-list li {
-  list-style: none;
-  color: white;
-  padding: 10px;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  background: black;
-  font-size: 14px;
-  width: 100px;
-}
-
+    list-style: none;
+    color: white;
+    padding: 10px;
+    border-radius: 8px 0px 0px 8px; /* This sets border radius only to the left side */
+    margin-bottom: 10px;
+    background: black;
+    font-size: 14px;
+    width: 100px;
+    cursor: pointer;
+  }
+  
 .menuBox {
   display: flex;
   align-items: center;
@@ -63,6 +64,10 @@
     width: 201px;
     left: 0;
 }
+.sidebar-list li.active {
+    background-color: white;
+    color: black;
+  }
 
 .shutdown-btn{
     margin-bottom: -3px;
