@@ -1,7 +1,4 @@
-import Tabs from "@mui/joy/Tabs";
-import TabList from "@mui/joy/TabList";
-import Tab from "@mui/joy/Tab";
-import TabPanel from "@mui/joy/TabPanel";
+
 import React, { useState } from "react";
 import "./sidebar.css";
 import Dashboard from "./Dashboard";
@@ -57,23 +54,3 @@ export default function Sidebar() {
   );
 }
 
-//   return (
-//     <div className="app">
-//       {/* Sidebar with tabs */}
-//       <div className="sidebar">
-//         <div className="tab" onClick={() => handleTabClick(0)}>Tab 1</div>
-//         <div className="tab" onClick={() => handleTabClick(1)}>Tab 2</div>
-//         <div className="tab" onClick={() => handleTabClick(2)}>Tab 3</div>
-//         <div className="tab" onClick={() => handleTabClick(3)}>Tab 4</div>
-//       </div>
-
-//       {/* Main content area */}
-//       <div className="content">
-//         {/* Render content based on active tab */}
-//         {tabContents[activeTab]}
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default App;

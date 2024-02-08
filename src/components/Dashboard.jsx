@@ -2,10 +2,7 @@ import React, { useState } from "react";
 import "./dashboard.css";
 import { PieChart, pieArcLabelClasses } from "@mui/x-charts/PieChart";
 import { LineChart } from "@mui/x-charts/LineChart";
-import Typography from "@mui/material/Typography";
-import Pagination from "@mui/material/Pagination";
-import Stack from "@mui/material/Stack";
-import PaginationComp from "./Pagination";
+
 import Table from "./Table";
 import ProfileCard from "./ProfileCard";
 import Rectangle10 from "../Assets/Rectangle10.png"

@@ -10,9 +10,6 @@ const LandingPage = () => {
             <div>
               <Sidebar/>
             </div>
-            <div>
-              
-            </div>
         </div>
        
     </div>
