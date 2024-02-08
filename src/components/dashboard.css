@@ -68,5 +68,5 @@
 }
 
 .css-1daenge-MuiChartsSurface-root .MuiPieArcLabel-root {
-    display: none;
+    display: none !important;
 }
