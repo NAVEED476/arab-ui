@@ -80,7 +80,7 @@ const Dashboard = () => {
             <PieChart
               series={[
                 {
-                  arcLabel: (item) => `${item.label} (${item.value})`,
+                  
                   arcLabelMinAngle: 45,
                   data: formattedData,
                 },
