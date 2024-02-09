@@ -79,6 +79,7 @@ const Dashboard = () => {
               <div className="spinner"><CircularProgress /></div>
             ) : (
               <LineChart
+              className="linechart"
                 width={650}
                 height={260}
                 data={lineData}

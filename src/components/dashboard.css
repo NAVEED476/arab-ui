@@ -48,6 +48,11 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.linechart{
+    width: 650px;
+    height: 260px;
+}
+
 .bottom-cont{
     display: flex;
     align-items: center;
@@ -70,3 +75,24 @@
 .css-1daenge-MuiChartsSurface-root .MuiPieArcLabel-root {
     display: none !important;
 }
+
+
+@media screen and (max-width:700px){
+    .right-cont {
+        width: 100%;
+        overflow: scroll;
+        height: 100vh;
+    }
+    .top-cont{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .graph-cont{
+        width: 500px;
+        height: auto;
+    }
+    
+}
+
+@media screen and (max-width:400px){}
