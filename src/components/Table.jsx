@@ -2,20 +2,28 @@ import React, { useEffect, useState } from "react";
 import "./Table.css";
 import TableRow from "./Row";
 import Pagination from "./Pagination";
-
+import CircularProgress from '@mui/material/CircularProgress';
 const Table = () => {
   const [currentPage, setCurrentPage] = useState(1);
+  const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
   const itemsPerPage = 5;
 
   useEffect(() => {
+    setLoading(true);
     fetch("https://arab-ms.onrender.com/api/table")
       .then((d) => d.json())
-      .then((obj => setData(obj)));
+      .then((obj) => {
+        setData(obj);
+        setLoading(false);
+      })
+      .catch((err)=>{
+        console.log(err)
+        setLoading(false)
+      })
   }, []);
   // console.log(data);
 
- 
   const handlePagination = (page) => {
     setCurrentPage(page);
   };
@@ -46,11 +54,11 @@ const Table = () => {
                 </td>
               </tr>
             </thead>
-            <tbody>
+           {loading ? <CircularProgress/> :  <tbody>
               {currentUsers.map((user) => (
                 <TableRow key={user.id} user={user} />
               ))}
-            </tbody>
+            </tbody>}
           </table>
         </div>
       </div>
