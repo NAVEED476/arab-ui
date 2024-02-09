@@ -82,6 +82,7 @@
         width: 100%;
         overflow: scroll;
         height: 100vh;
+        margin-top: -190px;
     }
     .top-cont{
         display: flex;

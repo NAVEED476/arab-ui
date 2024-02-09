@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./dashboard.css";
 import { PieChart, pieArcLabelClasses } from "@mui/x-charts/PieChart";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
-import CircularProgress from '@mui/material/CircularProgress';
+
 import Table from "./Table";
 import ProfileCard from "./ProfileCard";
 import Rectangle10 from "../Assets/Rectangle10.png";
@@ -27,7 +27,7 @@ const Dashboard = () => {
       })
       .catch((error) => {
         console.error("Error fetching line chart data:", error);
-        setLoadingLineChart(false); 
+        setLoadingLineChart(false);
       });
   }, []);
 
@@ -36,11 +36,11 @@ const Dashboard = () => {
       .then((d) => d.json())
       .then((obj) => {
         setData(obj);
-        setLoadingPieChart(false); 
+        setLoadingPieChart(false);
       })
       .catch((error) => {
         console.error("Error fetching pie chart data:", error);
-        setLoadingPieChart(false); 
+        setLoadingPieChart(false);
       });
   }, []);
 
@@ -54,7 +54,7 @@ const Dashboard = () => {
     y: item.y,
   }));
 
-  console.log(formattedLineData);
+  const pieColors = ['#67c587', '#88d1a1', '#a9deba', '#c9ead4', '#eaf6ed'];
 
   return (
     <div>
@@ -76,10 +76,9 @@ const Dashboard = () => {
         <div className="top-cont">
           <div className="graph-cont">
             {loadingLineChart ? (
-              <div className="spinner"><CircularProgress /></div>
+              <div className="spinner">Loading Line Chart...</div>
             ) : (
               <LineChart
-              className="linechart"
                 width={650}
                 height={260}
                 data={lineData}
@@ -101,7 +100,7 @@ const Dashboard = () => {
           </div>
           <div className="chart-cont" style={{ display: "flex" }}>
             {loadingPieChart ? (
-              <div className="spinner"><CircularProgress /></div>
+              <div className="spinner">Loading Pie Chart...</div>
             ) : (
               <PieChart
                 series={[
@@ -116,6 +115,7 @@ const Dashboard = () => {
                     fontWeight: "400",
                   },
                 }}
+                colors={pieColors}
                 {...size}
               />
             )}
