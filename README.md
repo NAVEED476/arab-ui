@@ -6,8 +6,18 @@ This React component is a dashboard that displays various data visualizations, i
 ## Clone the project using below Links
 ## frontend
       git clone https://github.com/NAVEED476/arab-ui.git
+
+        cd arab
+        npm i 
+        npm start ==> to start the front end projct
+
 ## backend 
       git clone https://github.com/NAVEED476/arab-microservice.git
+
+        cd Server
+        npm i 
+        npm start ==> to start the front end projct
+
 ## Features
 
 - Displays a line chart using the Recharts library.
@@ -16,19 +26,12 @@ This React component is a dashboard that displays various data visualizations, i
 - Provides a responsive layout that adjusts to different screen sizes.
 - Utilizes loading spinners to indicate when data is being fetched.
 
-## Usage
+## Deployed Links
 
-To use this component in your React application:
+frontend :- https://arab-ui.onrender.com/
+microService :- https://dashboard.render.com/web/srv-cn2il2gl6cac739e40bg
 
-1. Copy the `Dashboard.js` file into your project's components directory.
-2. Ensure you have installed the necessary dependencies:
-   ```bash
-   npm install recharts @mui/x-charts
-   ```
-3. Import the `Dashboard` component into your desired parent component.
-4. Include the `Dashboard` component in your JSX markup.
 
-```jsx
 
 ## API Endpoints
 
