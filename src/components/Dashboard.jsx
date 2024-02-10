@@ -49,10 +49,6 @@ const Dashboard = () => {
     value: item.value,
   }));
 
-  const formattedLineData = lineData.map((item) => ({
-    x: item.x,
-    y: item.y,
-  }));
 
   const pieColors = ['#67c587', '#88d1a1', '#a9deba', '#c9ead4', '#eaf6ed'];
 

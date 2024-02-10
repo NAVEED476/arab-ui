@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# Dashboard Component
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This React component is a dashboard that displays various data visualizations, including a line chart, a pie chart, and a table. It fetches data from external APIs and renders the charts and table dynamically.
 
-## Available Scripts
 
-In the project directory, you can run:
+## Clone the project using below Links
+## frontend
+      git clone https://github.com/NAVEED476/arab-ui.git
+## backend 
+      git clone https://github.com/NAVEED476/arab-microservice.git
+## Features
 
-### `npm start`
+- Displays a line chart using the Recharts library.
+- Displays a pie chart using the MUI (Material-UI) x-charts library.
+- Fetches data from external APIs to populate the charts and table.
+- Provides a responsive layout that adjusts to different screen sizes.
+- Utilizes loading spinners to indicate when data is being fetched.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Usage
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To use this component in your React application:
 
-### `npm test`
+1. Copy the `Dashboard.js` file into your project's components directory.
+2. Ensure you have installed the necessary dependencies:
+   ```bash
+   npm install recharts @mui/x-charts
+   ```
+3. Import the `Dashboard` component into your desired parent component.
+4. Include the `Dashboard` component in your JSX markup.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```jsx
 
-### `npm run build`
+## API Endpoints
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Line Chart Data: `https://arab-ms.onrender.com/api/graph`
+- Pie Chart Data: `https://arab-ms.onrender.com/api/pie-chart`
+- Table Data: `https://arab-ms.onrender.com/api/table`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Dependencies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [Recharts](https://recharts.org/)
+- [@mui/x-charts](https://mui.com/getting-started/installation/)
+- React (assumed to be installed)
 
-### `npm run eject`
+## Credits
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This dashboard component was created by [Your Name] for demonstration purposes.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
